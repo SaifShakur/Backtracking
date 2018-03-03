@@ -11,11 +11,11 @@ int main(){
 
 	std::vector<std::string> elements; 	//---[elements]--- 	: a vector used to store the concatenating values
 	std::vector<int> stack4output;		//---[stack4output]--- : a vector that we use to store the values that concatenate to form the key
-	int size;						//---[size]---	: size of vector "elements"
+	int size;				//---[size]---	: size of vector "elements"
 	std::string res = "";			//---[res]---   	: a string used in our functions (checkmatch, checkpartial) to determine if 
-									//		the result of the current "elements" being concatenated together form our key 
+						//		the result of the current "elements" being concatenated together form our key 
 	std::string key, input;			//---[key]--- 	: the target we are searching for through the backtracking algorithm.
-									//---[input]---	: string used for input from the user
+						//---[input]---	: string used for input from the user
 
 	std::cout << std::endl;
 	std::cout << "Enter the target string (a non-zero/non-negative/non-decimal integer): ";	//Accquring the target string (key) 
@@ -79,11 +79,11 @@ bool checkmatch(std::string res, const std::string& key, const std::vector<std::
 			stack4output.push_back(i);	//Storing index "i" since it yielded a partial match
 
 			if( checkmatch(res, key, elements, stack4output) ) 	//RECURSION: So far we have a partial match, so we will recursively call the function
-				return true;									//	(checkmatch) to determine if it is part of the final sequence of indices which
-																//	compose the key.  					
+				return true;					//	(checkmatch) to determine if it is part of the final sequence of indices which
+										//	compose the key.  					
 
 			stack4output.pop_back();	//BACKTRACKING: If "checkmatch" results in a FALSE, then we have to backtrack by removing the index we added, as it 
-										//	does not lead to a successful path
+							//	does not lead to a successful path
 		
 		}
 		res = res.erase((res.size() - elements[i].size()), elements[i].size());		//BACKTRACKING: Removing the last added element from the "elements" vector
@@ -92,7 +92,7 @@ bool checkmatch(std::string res, const std::string& key, const std::vector<std::
 												//	yields a partial match to the key (using the "checkpartial" function)
 
 	}
-	return false;					//We've exhausted all elements of the vector and have not found a match
+	return false;		//We've exhausted all elements of the vector and have not found a match
 		
 }
 
