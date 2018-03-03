@@ -6,8 +6,11 @@ the target string can be encrypted based on the indices of the vector storing th
 
 NOTE: We assume valid input for the target string, set size, and elements.
 
-Example : Target string is “abbccca”. Elements set has 3 strings in it: “a”, “bb” and “ccc” (in this order). 
+Example of use: Target string is “abbccca”. Elements set has 3 strings in it: “a”, “bb” and “ccc” (in this order). 
 So the output shows 0 1 2 0 because “abbccca” is “a”+”bb”+”ccc”+”a”.
 
+1 file makes up this project:
+
+-Backtracking.cpp: contains all code of the program
 
 
