@@ -9,7 +9,7 @@ NOTE: We assume valid input for the target string, set size, and elements.
 Example of use: Target string is “abbccca”. Elements set has 3 strings in it: “a”, “bb” and “ccc” (in this order). 
 So the output shows 0 1 2 0 because “abbccca” is “a”+”bb”+”ccc”+”a”.
 
-1 file makes up this project:
+1 file makes up the project:
 
 -Backtracking.cpp: contains all code of the program
 
